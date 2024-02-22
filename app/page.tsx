@@ -385,7 +385,7 @@ export default function Home() {
                         href="https://mehmetonur.com/"
                         className="text-blue-400 hover:underline"
                       >
-                        https://mehmetonur.com/
+                        https://mehmetonur.com
                       </a>
                     </div>
                     <div className="flex flex-row mt-4 gap-2">
@@ -451,10 +451,10 @@ export default function Home() {
                     <div className=" text-sm mt-4">
                       <a
                         target="_blank"
-                        href="https://mehmetonur.com/"
+                        href="https://kafkal.com/"
                         className="text-blue-400 hover:underline"
                       >
-                        https://kafkal.com/
+                        https://kafkal.com
                       </a>
                     </div>
                     <div className="flex flex-row mt-4 gap-2">
