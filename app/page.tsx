@@ -1,113 +1,514 @@
-import Image from "next/image";
+import Container from "@/components/Container";
 
+import IconBox from "@/components/IconBox";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+} from "@nextui-org/react";
+import { CiMail } from "react-icons/ci";
+import {
+  FaFileAlt,
+  FaLinkedin,
+  FaGithub,
+  FaMedium,
+  FaCalendarAlt,
+} from "react-icons/fa";
+import IconTooltip from "@/components/IconTooltip";
+import AWSIcon from "@/components/icons/AwsIcon";
+import DockerIcon from "@/components/icons/DockerIcon";
+import GoIcon from "@/components/icons/GoIcon";
+import HibernateIcon from "@/components/icons/Hibernate";
+import JavaIcon from "@/components/icons/JavaIcon";
+import JestIcon from "@/components/icons/JestIcon";
+import KafkaIcon from "@/components/icons/KafkaIcon";
+import KubernetesIcon from "@/components/icons/KubernetesIcon";
+import MongoIcon from "@/components/icons/MongoIcon";
+import MySqlIcon from "@/components/icons/MySqlIcon";
+import NestJSIcon from "@/components/icons/NestjsIcon";
+import NodeIcon from "@/components/icons/Nodejs";
+import PostgreSqlIcon from "@/components/icons/PostgreSqlIco";
+import RedislIcon from "@/components/icons/RedisIcon";
+import TypeScriptIcon from "@/components/icons/TypescriptIcon";
+import ExpressIcon from "@/components/icons/Express";
+import NextJSIcon from "@/components/icons/NextIcon";
+import PhpIcon from "@/components/icons/PhpIcon";
+import WordpressIcon from "@/components/icons/WordpressIcon";
+
+const getAge = () => {
+  const myBirthDay = new Date("1999-01-12");
+  const currentDay = new Date();
+
+  const age = currentDay.getFullYear() - myBirthDay.getFullYear();
+
+  return age.toString();
+};
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <Container>
+      <div className="flex flex-col mt-20 gap-10">
+        <div className="flex flex-col gap-2">
+          <div className="text-white font-bold text-4xl">Kaan Topal</div>
+          <div className=" text-sm text-gray-400">
+            Backend Software Engineer
+          </div>
+        </div>
+        <div className="text-white opacity-90">
+          Hi!👋 I'm Kaan from Türkiye, Experienced backend developer with 2
+          years of hands-on involvement in multiple projects, adept at
+          collaborating within multidisciplinary teams. Continuously enhancing
+          skills and exploring new technologies. Completed military service and
+          currently aged {getAge()}.
+        </div>
+        <div className="flex flex-col gap-4">
+          <a href="mailto:kaant43@gmail.com">
+            {" "}
+            <IconBox icon={CiMail} text="kaant43@gmail.com" />
           </a>
+          <a>
+            <div className="flex flex-row items-center gap-2 opacity-80 hover:opacity-90 hover:cursor-pointer">
+              <FaFileAlt size={20} color="white" />
+              <div className="text-sm">Contact Me For Resume</div>
+            </div>
+          </a>
+
+          <div className="flex flex-col md:flex-row gap-4 mt-4">
+            <div className="flex gap-4 items-center">
+              <a href="https://www.linkedin.com/in/kaan-topal/" target="_blank">
+                <Button
+                  className={`bg-[#0a66c2] rounded-md text-white w-32  `}
+                  startContent={<FaLinkedin size={20} color="white" />}
+                >
+                  LinkedIn
+                </Button>
+              </a>
+            </div>
+            <div className="flex flex-row  gap-4">
+              <div className="flex gap-4 items-center">
+                <a href="https://medium.com/@kaant43" target="_blank">
+                  <Button
+                    className={`bg-[#000] rounded-md text-white w-32 `}
+                    startContent={<FaMedium size={20} color="white" />}
+                  >
+                    Medium
+                  </Button>
+                </a>
+              </div>
+
+              <div className="flex gap-4 items-center">
+                <a href="https://github.com/kaantpll" target="_blank">
+                  <Button
+                    className={`bg-[#292929] rounded-md text-white w-32 `}
+                    startContent={<FaGithub size={20} color="white" />}
+                  >
+                    Github
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="opacity-20" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="bg-gray-800 hover:shadow-md hover:shadow-cyan-900 hover:cursor-pointer ">
+            <CardHeader>
+              <h1 className="font-bold text-xl text-white opacity-90">APIs</h1>
+            </CardHeader>
+            <CardBody>
+              <p className="text-white opacity-80 leading-5 text-sm">
+                RESTful APIs, microservices, clean & hexagonal architecture and
+                more.
+              </p>
+              <br />
+              <p className="text-white opacity-80 leading-5 text-sm">
+                I have experience in creating REST APIs from scratch, and I
+                continually develop myself by staying updated with new
+                approaches.
+              </p>
+            </CardBody>
+
+            <CardFooter>
+              <div className="grid grid-cols-5 gap-2">
+                <IconTooltip
+                  content="Typescript"
+                  icon={<TypeScriptIcon className="fill-blue-500" size={24} />}
+                />
+
+                <IconTooltip
+                  content="Java"
+                  icon={<JavaIcon className="fill-blue-500" size={24} />}
+                />
+
+                <IconTooltip
+                  content="Node.js"
+                  icon={<NodeIcon className="fill-green-500" size={24} />}
+                />
+                <IconTooltip
+                  content="Nest.js"
+                  icon={<NestJSIcon className="fill-red-500" size={24} />}
+                />
+
+                <IconTooltip
+                  content="Go"
+                  icon={<GoIcon className="fill-blue-500" size={24} />}
+                />
+              </div>
+            </CardFooter>
+          </Card>
+
+          <Card className="bg-gray-800 hover:shadow-md hover:shadow-cyan-900 hover:cursor-pointer ">
+            <CardHeader>
+              <h1 className="font-bold text-xl text-white opacity-90">
+                Databases
+              </h1>
+            </CardHeader>
+            <CardBody>
+              <p className="text-white opacity-80 leading-5 text-sm">
+                Designing, managing relational databases, and working with ORM.
+              </p>
+              <br />
+              <p className="text-white opacity-80 leading-5 text-sm">
+                "I am experienced in preparing designs for both relational and
+                non-relational databases. I also have expertise in optimizing
+                database queries.
+              </p>
+            </CardBody>
+
+            <CardFooter>
+              <div className="grid grid-cols-5 gap-2">
+                <IconTooltip
+                  content="PostgreSQL"
+                  icon={<PostgreSqlIcon className="fill-blue-500" size={24} />}
+                />
+
+                <IconTooltip
+                  content="Redis"
+                  icon={<RedislIcon className="fill-blue-500" size={24} />}
+                />
+
+                <IconTooltip
+                  content="MongoDB"
+                  icon={<MongoIcon className="fill-green-500" size={24} />}
+                />
+                <IconTooltip
+                  content="MySQL"
+                  icon={<MySqlIcon className="fill-red-500" size={24} />}
+                />
+
+                <IconTooltip
+                  content="Hibernate"
+                  icon={<HibernateIcon className="fill-blue-500" size={24} />}
+                />
+              </div>
+            </CardFooter>
+          </Card>
+          <Card className="bg-gray-800 hover:shadow-md hover:shadow-cyan-900 hover:cursor-pointer ">
+            <CardHeader>
+              <h1 className="font-bold text-xl text-white opacity-90">Tools</h1>
+            </CardHeader>
+            <CardBody>
+              <p className="text-white opacity-80 leading-5 text-sm">
+                Speeding up tasks and automating processes while working on
+                projects.
+              </p>
+              <br />
+              <p className="text-white opacity-80 leading-5 text-sm">
+                I am knowledgeable about various tools and have worked on
+                integrating them into necessary organizations and projects.
+              </p>
+            </CardBody>
+
+            <CardFooter>
+              <div className="grid grid-cols-5 gap-2">
+                <IconTooltip
+                  content="AWS"
+                  icon={<AWSIcon className="fill-yellow-500" size={24} />}
+                />
+                <IconTooltip
+                  content="Docker"
+                  icon={<DockerIcon className="fill-green-500" size={24} />}
+                />
+                <IconTooltip
+                  content="Kafka"
+                  icon={<KafkaIcon className="fill-blue-500" size={24} />}
+                />
+                <IconTooltip
+                  content="Kubernetes"
+                  icon={<KubernetesIcon className="fill-blue-500" size={24} />}
+                />
+                <IconTooltip
+                  content="Jest"
+                  icon={<JestIcon className="fill-green-500" size={24} />}
+                />
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="flex flex-col">
+          <div className="font-bold text-xl">Work Experience</div>
+
+          <div className="flex flex-col ">
+            <div className="flex flex-col gap-6 ">
+              <div className="flex flex-row justify-between items-center mt-10">
+                <div className="flex flex-col">
+                  <div className="font-bold text-lg">Kafkal Software</div>
+                  <div className="text-sm font-light opacity-80">
+                    Backend Engineer
+                  </div>
+                </div>
+                <div className="flex flex-row items-center gap-2 opacity-80 font-light text-sm">
+                  <FaCalendarAlt size={16} color="white" />
+                  <div className="text-sm">June 2022 - Ongoing</div>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="flex flex-row gap-4">
+                  <div className="flex flex-col bg-gray-800 rounded-md  px-4 py-4">
+                    <div className="leading-5">
+                      {" "}
+                      I work at Kafka Software as a Backend Engineer. I am
+                      involved in database designs, algorithmic flowcharts, and
+                      server developments from scratch to production.
+                      Additionally, I am also interested in code deployment and
+                      server operations.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-4 font-bold opacity-90 text-xl md:text-medium">
+                  Projects
+                </div>
+                <div className="flex flex-row gap-4 md:p-4 md:ml-4 mt-8 md:mt-4">
+                  <div className="hidden md:block bg-gray-600 rounded-sm w-1.5 min-h-12 p"></div>
+                  <div className="flex flex-col rounded-md">
+                    <div className="font-bold">Awards System</div>
+                    <div className="text-sm font-light opacity-80">
+                      January 2023 - Ongoing
+                    </div>
+                    <div className=" leading-5  mt-4 ">
+                      The Awards system is an award system that supports
+                      multiple websites with its dynamic infrastructure and
+                      allows for the creation of a new project award system
+                      within hours whenever needed.
+                    </div>
+
+                    <div className="flex flex-col text-sm mt-4">
+                      <a
+                        target="_blank"
+                        href="https://felisodulleri.com"
+                        className="text-blue-400  hover:underline"
+                      >
+                        https://felisodulleri.com
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://polarisawards.com/"
+                        className="text-blue-400  hover:underline "
+                      >
+                        https://polarisawards.com
+                      </a>
+                      <a
+                        target="_blank"
+                        href="   https://curious.felisodulleri.com/"
+                        className="text-blue-400 hover:underline"
+                      >
+                        https://curious.felisodulleri.com
+                      </a>
+                    </div>
+                    <div className="flex flex-row mt-4 gap-2">
+                      <IconTooltip
+                        content="Nest.js"
+                        icon={
+                          <NestJSIcon className="fill-green-500" size={18} />
+                        }
+                      />
+                      <IconTooltip
+                        content="Express"
+                        icon={
+                          <ExpressIcon className="fill-green-500" size={18} />
+                        }
+                      />
+
+                      <IconTooltip
+                        content="Typescript"
+                        icon={
+                          <TypeScriptIcon className="fill-blue-500" size={18} />
+                        }
+                      />
+                      <IconTooltip
+                        content="AWS"
+                        icon={<AWSIcon className="fill-yellow-500" size={18} />}
+                      />
+
+                      <IconTooltip
+                        content="Docker"
+                        icon={
+                          <DockerIcon className="fill-yellow-500" size={18} />
+                        }
+                      />
+
+                      <IconTooltip
+                        content="Next.js"
+                        icon={
+                          <NextJSIcon className="fill-yellow-500" size={18} />
+                        }
+                      />
+                      <IconTooltip
+                        content="PostgreSQL"
+                        icon={
+                          <PostgreSqlIcon
+                            className="fill-yellow-500"
+                            size={18}
+                          />
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-4 md:p-4 md:ml-4 mt-12 md:mt-0">
+                  <div className="hidden md:block bg-gray-600 rounded-sm w-1 p"></div>
+                  <div className="flex flex-col   rounded-md">
+                    <div className="font-bold">Mehmetonur Talent Agency</div>
+                    <div className="text-sm font-light opacity-80">
+                      January 2024 - March 2024
+                    </div>
+                    <div className="opacity-80 leading-5 text-sm mt-4 ">
+                      The Mehmetonur Talenty Agency Project is an application
+                      that provides support in dubbing and voice-related
+                      matters, offering introductions to clients.
+                    </div>
+                    <div className=" text-sm mt-4">
+                      <a
+                        target="_blank"
+                        href="https://mehmetonur.com/"
+                        className="text-blue-400 hover:underline"
+                      >
+                        https://mehmetonur.com/
+                      </a>
+                    </div>
+                    <div className="flex flex-row mt-4 gap-2">
+                      <IconTooltip
+                        content="PHP"
+                        icon={<PhpIcon className="fill-green-500" size={18} />}
+                      />
+                      <IconTooltip
+                        content="WordPress"
+                        icon={
+                          <WordpressIcon className="fill-green-500" size={18} />
+                        }
+                      />
+                      <IconTooltip
+                        content="MySQL"
+                        icon={<MySqlIcon className="fill-blue-500" size={18} />}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-row gap-4 md:p-4 md:ml-4 mt-12 md:mt-0">
+                  <div className="hidden md:block bg-gray-600 rounded-sm w-1 p"></div>
+                  <div className="flex flex-col  rounded-md">
+                    <div className="font-bold">
+                      Istanbul Chamber Of Commerce Election Promotion{" "}
+                    </div>
+                    <div className="text-sm font-light opacity-80">
+                      September 2022 - December 2022
+                    </div>
+                    <div className="opacity-80 leading-5 text-sm mt-4 ">
+                      A group at the Istanbul Chamber of Commerce shares their
+                      own introductions and collects support through a website.
+                      It was static page.
+                    </div>
+                    <div className="flex flex-row mt-4 gap-2">
+                      <IconTooltip
+                        content="Node.js"
+                        icon={<NodeIcon className="fill-green-500" size={18} />}
+                      />
+                      <IconTooltip
+                        content="Express"
+                        icon={
+                          <ExpressIcon className="fill-green-500" size={18} />
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-row gap-4 md:p-4 md:ml-4 mt-12 md:mt-0">
+                  <div className="hidden md:block bg-gray-600 rounded-sm w-1 p"></div>
+                  <div className="flex flex-col  rounded-md">
+                    <div className="font-bold">Kafkal Website</div>
+                    <div className="text-sm font-light opacity-80">
+                      June 2022 - August 2022
+                    </div>
+                    <div className="opacity-80 leading-5 text-sm mt-4">
+                      This project is introduction page of Kafka Software
+                      company. This project is introduction page of Kafka
+                      Software company. It was static page.
+                    </div>
+                    <div className=" text-sm mt-4">
+                      <a
+                        target="_blank"
+                        href="https://mehmetonur.com/"
+                        className="text-blue-400 hover:underline"
+                      >
+                        https://kafkal.com/
+                      </a>
+                    </div>
+                    <div className="flex flex-row mt-4 gap-2">
+                      <IconTooltip
+                        content="Next.js"
+                        icon={
+                          <NextJSIcon className="fill-green-500" size={18} />
+                        }
+                      />
+                      <IconTooltip
+                        content="Node.js"
+                        icon={<NodeIcon className="fill-green-500" size={18} />}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="opacity-20" />
+        <div className="flex flex-col">
+          <div className="font-bold text-xl ">Education</div>
+
+          <div className="flex flex-col gap-6 bg-gray-800 rounded-md p-4 mt-6">
+            <div className="flex flex-col mt-2">
+              <div className="font-bold text-lg">
+                Zonguldak Bülent Ecevit University
+              </div>
+              <div className="text-sm font-light opacity-80">
+                Computer Science
+              </div>
+            </div>
+
+            <div className="opacity-80 leading-5 text-sm ">
+              I graduated with a GPA of 2.96 in Computer Science in 2022, with a
+              focus on software development and algorithm design, earning a
+              Bachelor's degree.
+            </div>
+
+            <div className="flex flex-row items-center gap-2 opacity-80 font-light text-sm justify-end">
+              <FaCalendarAlt size={16} color="white" />
+              <div>September 2018 - September 2022</div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center gap-2 mt-10">
+          <div className="flex flex-row justify-center text-sm font-light opacity">{`Copyright © ${new Date().getFullYear()} Kaan Topal`}</div>
+          <div className="flex flex-row justify-center text-sm font-light opacity-80">
+            Created By Kaan Topal. Used Next.js, NextUI and Tailwind.
+            Self-hosted.
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </Container>
   );
 }
