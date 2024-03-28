@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kaantopal.online
+
+# Sitemaps
+Sitemap: https://kaantopal.online/sitemap.xml
