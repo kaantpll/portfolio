@@ -10,7 +10,7 @@ const IconButton: React.FC<IconButtonProps> = ({ text, icon: Icon, color }) => {
   return (
     <div className="flex gap-4 items-center">
       <Button
-        className={`bg-[${color}] rounded-md text-white `}
+        className={`bg-[${color}] rounded-md text-white`}
         startContent={<Icon size={20} color="white" />}
       >
         {text}

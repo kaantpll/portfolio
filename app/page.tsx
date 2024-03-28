@@ -70,7 +70,7 @@ export default function Home() {
           <a>
             <div className="flex flex-row items-center gap-2 opacity-80 hover:opacity-90 hover:cursor-pointer">
               <FaFileAlt size={20} color="white" />
-              <div className="text-sm">Contact Me For Resume</div>
+              <div className="text-sm">Contact me for resume</div>
             </div>
           </a>
 
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="flex gap-4 items-center">
               <a href="https://www.linkedin.com/in/kaan-topal/" target="_blank">
                 <Button
-                  className={`bg-[#0a66c2] rounded-md text-white w-32  `}
+                  className={`bg-[#0a66c2] rounded-md text-white w-32 hover:opacity-80`}
                   startContent={<FaLinkedin size={20} color="white" />}
                 >
                   LinkedIn
@@ -89,7 +89,7 @@ export default function Home() {
               <div className="flex gap-4 items-center">
                 <a href="https://medium.com/@kaant43" target="_blank">
                   <Button
-                    className={`bg-[#000] rounded-md text-white w-32 `}
+                    className={`bg-[#000] rounded-md text-white w-32 hover:opacity-80 `}
                     startContent={<FaMedium size={20} color="white" />}
                   >
                     Medium
@@ -100,7 +100,7 @@ export default function Home() {
               <div className="flex gap-4 items-center">
                 <a href="https://github.com/kaantpll" target="_blank">
                   <Button
-                    className={`bg-[#292929] rounded-md text-white w-32 `}
+                    className={`bg-[#292929] rounded-md text-white w-32 hover:opacity-80`}
                     startContent={<FaGithub size={20} color="white" />}
                   >
                     Github
@@ -137,11 +137,6 @@ export default function Home() {
                 />
 
                 <IconTooltip
-                  content="Java"
-                  icon={<JavaIcon className="fill-blue-500" size={24} />}
-                />
-
-                <IconTooltip
                   content="Node.js"
                   icon={<NodeIcon className="fill-green-500" size={24} />}
                 />
@@ -149,7 +144,10 @@ export default function Home() {
                   content="Nest.js"
                   icon={<NestJSIcon className="fill-red-500" size={24} />}
                 />
-
+                <IconTooltip
+                  content="Java"
+                  icon={<JavaIcon className="fill-blue-500" size={24} />}
+                />
                 <IconTooltip
                   content="Go"
                   icon={<GoIcon className="fill-blue-500" size={24} />}
@@ -266,7 +264,7 @@ export default function Home() {
               <div className="flex flex-col">
                 <div className="flex flex-row gap-4">
                   <div className="flex flex-col bg-gray-800 rounded-md  px-4 py-4">
-                    <div className="leading-5">
+                    <div className="leading-5 ">
                       {" "}
                       I work at Kafka Software as a Backend Engineer. I am
                       involved in database designs, algorithmic flowcharts, and
@@ -287,7 +285,7 @@ export default function Home() {
                     <div className="text-sm font-light opacity-80">
                       January 2023 - Ongoing
                     </div>
-                    <div className=" leading-5  mt-4 ">
+                    <div className=" leading-5 text-sm  mt-4 opacity-80">
                       The Awards system is an award system that supports
                       multiple websites with its dynamic infrastructure and
                       allows for the creation of a new project award system
