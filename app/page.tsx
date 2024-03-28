@@ -442,9 +442,9 @@ export default function Home() {
                       June 2022 - August 2022
                     </div>
                     <div className="opacity-80 leading-5 text-sm mt-4">
-                      This project is introduction page of Kafka Software
-                      company. This project is introduction page of Kafka
-                      Software company. It was static page.
+                      This project is introduction page of Kafkal Software
+                      company. This project is introduction page of Kafkal
+                      Software company.
                     </div>
                     <div className=" text-sm mt-4">
                       <a
