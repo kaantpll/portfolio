@@ -22,13 +22,18 @@ export const metadata: Metadata = {
       },
       {
         media: "(prefers-color-scheme: dark)",
-        url: "/android-chrome-192x192.png",
+        url: "/android-chrome-512x512.png",
+        href: "/android-chrome-512x512.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/favicon-16x16.png",
         href: "/favicon-16x16.png",
       },
       {
         media: "(prefers-color-scheme: dark)",
-        url: "/android-chrome-192x192.svg",
-        href: "/favicon-32x32.svg",
+        url: "/favicon-32x32.png",
+        href: "/favicon-32x32.png",
       },
     ],
   },
