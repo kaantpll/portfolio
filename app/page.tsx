@@ -266,7 +266,7 @@ export default function Home() {
                   <div className="flex flex-col bg-gray-800 rounded-md  px-4 py-4">
                     <div className="leading-5 ">
                       {" "}
-                      I work at Kafka Software as a Backend Engineer. I am
+                      I work at Kafkal Software as a Backend Engineer. I am
                       involved in database designs, algorithmic flowcharts, and
                       server developments from scratch to production.
                       Additionally, I am also interested in code deployment and
