@@ -7,13 +7,28 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kaan Topal",
-  description: "Kaan Topal Portfolio Website",
+  description: "Kaan Topal Website",
   icons: {
     icon: [
       {
         media: "(prefers-color-scheme: dark)",
         url: "/profile.svg",
         href: "/profile.svg",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/android-chrome-192x192.png",
+        href: "/android-chrome-192x192.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/android-chrome-192x192.png",
+        href: "/favicon-16x16.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/android-chrome-192x192.svg",
+        href: "/favicon-32x32.svg",
       },
     ],
   },
