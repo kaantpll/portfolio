@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Kaan Topal",
   description: "Kaan Topal Website",
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       {
