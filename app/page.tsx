@@ -68,7 +68,7 @@ export default function Home() {
             <IconBox icon={CiMail} text="kaant43@gmail.com" />
           </a>
           <a>
-            <div className="flex flex-row items-center gap-2 opacity-80 hover:opacity-90 hover:cursor-pointer">
+            <div className="flex flex-row items-center gap-2 opacity-80">
               <FaFileAlt size={20} color="white" />
               <div className="text-sm">Contact me for resume</div>
             </div>
@@ -408,16 +408,13 @@ export default function Home() {
                 <div className="flex flex-row gap-4 md:p-4 md:ml-4 mt-12 md:mt-0">
                   <div className="hidden md:block bg-gray-600 rounded-sm w-1 p"></div>
                   <div className="flex flex-col  rounded-md">
-                    <div className="font-bold">
-                      Istanbul Chamber Of Commerce Election Promotion{" "}
-                    </div>
+                    <div className="font-bold">Election System</div>
                     <div className="text-sm font-light opacity-80">
                       September 2022 - December 2022
                     </div>
                     <div className="opacity-80 leading-5 text-sm mt-4 ">
-                      A group at the Istanbul Chamber of Commerce shares their
-                      own introductions and collects support through a website.
-                      It was static page.
+                      System where participants share their own group's
+                      promotions for selection
                     </div>
                     <div className="flex flex-row mt-4 gap-2">
                       <IconTooltip
