@@ -85,7 +85,7 @@ export default function Home() {
                 </Button>
               </a>
             </div>
-            <div className="flex flex-row  gap-4">
+            <div className="flex flex-row gap-4">
               <div className="flex gap-4 items-center">
                 <a href="https://medium.com/@kaant43" target="_blank">
                   <Button
@@ -103,7 +103,7 @@ export default function Home() {
                     className={`bg-[#292929] rounded-md text-white w-32 hover:opacity-80`}
                     startContent={<FaGithub size={20} color="white" />}
                   >
-                    Github
+                    GitHub
                   </Button>
                 </a>
               </div>
@@ -251,7 +251,12 @@ export default function Home() {
             <div className="flex flex-col gap-6 ">
               <div className="flex flex-row justify-between items-center mt-10">
                 <div className="flex flex-col">
-                  <div className="font-bold text-lg">Kafkal Software</div>
+                  <a href="https://kafkal.com/">
+                    <div className="font-bold text-lg hover:underline text-white">
+                      Kafkal Yazılım
+                    </div>
+                  </a>
+
                   <div className="text-sm font-light opacity-80">
                     Backend Engineer
                   </div>
@@ -309,10 +314,17 @@ export default function Home() {
                       </a>
                       <a
                         target="_blank"
-                        href="   https://curious.felisodulleri.com/"
+                        href="https://curious.felisodulleri.com/"
                         className="text-blue-400 hover:underline"
                       >
                         https://curious.felisodulleri.com
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://sardisawards.com/"
+                        className="text-blue-400 hover:underline"
+                      >
+                        https://sardisawards.com/
                       </a>
                     </div>
                     <div className="flex flex-row mt-4 gap-2">
@@ -493,6 +505,32 @@ export default function Home() {
             <div className="flex flex-row items-center gap-2 opacity-80 font-light text-sm justify-end">
               <FaCalendarAlt size={16} color="white" />
               <div>September 2018 - September 2022</div>
+            </div>
+          </div>
+        </div>
+
+        <hr className="opacity-20" />
+
+        <div className="flex flex-col">
+          <div className="font-bold text-xl ">The Books I Read</div>
+
+          <div className="flex flex-col  bg-gray-800 rounded-md p-4 mt-6">
+            <div>
+              <div className="opacity-80 leading-5 text-sm hover:opacity-100  ">
+                Clean Code: A Handbook of Agile Software Craftsmanship - Robert
+                C. Martin
+              </div>
+              <hr className="opacity-20 mt-3 mb-3" />
+
+              <div className="opacity-80 leading-5 text-sm hover:opacity-100 ">
+                Unit Testing Principles, Practices and Patterns - Vladimir
+                Khorikov
+              </div>
+              <hr className="opacity-20 mt-3 mb-3" />
+
+              <div className="opacity-80 leading-5 text-sm hover:opacity-100 ">
+                System Design Interview - Alex Xu
+              </div>
             </div>
           </div>
         </div>
