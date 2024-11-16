@@ -286,15 +286,15 @@ export default function Home() {
                 <div className="flex flex-row gap-4 md:p-4 md:ml-4 mt-8 md:mt-4">
                   <div className="hidden md:block bg-gray-600 rounded-sm w-1.5 min-h-12 p"></div>
                   <div className="flex flex-col rounded-md">
-                    <div className="font-bold">Awards System</div>
+                    <div className="font-bold">Awards Brain</div>
                     <div className="text-sm font-light opacity-80">
                       January 2023 - Ongoing
                     </div>
                     <div className=" leading-5 text-sm  mt-4 opacity-80">
-                      The Awards system is an award system that supports
-                      multiple websites with its dynamic infrastructure and
-                      allows for the creation of a new project award system
-                      within hours whenever needed.
+                      We created an Awards Brain system in which users apply for
+                      specific categories. These applications are then evaluated
+                      by judges, and the winners are determined based on the
+                      results.
                     </div>
 
                     <div className="flex flex-col text-sm mt-4">
@@ -466,14 +466,14 @@ export default function Home() {
                     </div>
                     <div className="flex flex-row mt-4 gap-2">
                       <IconTooltip
+                        content="Node.js"
+                        icon={<NodeIcon className="fill-green-500" size={18} />}
+                      />
+                      <IconTooltip
                         content="Next.js"
                         icon={
                           <NextJSIcon className="fill-green-500" size={18} />
                         }
-                      />
-                      <IconTooltip
-                        content="Node.js"
-                        icon={<NodeIcon className="fill-green-500" size={18} />}
                       />
                     </div>
                   </div>
