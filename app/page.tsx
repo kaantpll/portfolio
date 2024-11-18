@@ -118,8 +118,7 @@ export default function Home() {
             </CardHeader>
             <CardBody>
               <p className="text-white opacity-80 leading-5 text-sm">
-                RESTful APIs, microservices, clean & hexagonal architecture and
-                more.
+                RESTful APIs, clean code, microservices and so on.
               </p>
               <br />
               <p className="text-white opacity-80 leading-5 text-sm">
